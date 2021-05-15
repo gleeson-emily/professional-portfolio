@@ -17,8 +17,6 @@ h1 {
     line-height: 50px;
 }
 
-
-
 .navbar {
     float: right;
     color: rgb(99, 96, 96);
@@ -31,16 +29,14 @@ h1 {
     font-size: 150%;
 }
 
-.subheadImage {
-    display: flex;
-
+.subhead {
+    background-image: url("../assets/images/portfolio-background.png"); 
+    min-height: 300px;
+    min-width: 600px;
+    background-size: cover;
 }
 
-.subheadImage img {
-    object-fit: fill;
-}
-
-.subheadImage h2 {
+.subhead h2 {
     font-size: 175%;
     line-height: 50px;
     color:rgb(128, 125, 125);
