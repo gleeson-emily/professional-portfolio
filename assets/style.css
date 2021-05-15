@@ -1,0 +1,48 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    background-color:rgb(252, 151, 201);
+    color: rgb(99, 96, 96);
+    min-height: 100px;
+}
+
+body {
+    background-color: rgb(255, 219, 237);
+}
+
+h1 {
+    font-size: 200%;
+    line-height: 50px;
+}
+
+
+
+.navbar {
+    float: right;
+    color: rgb(99, 96, 96);
+}
+.navbar li {
+    display: inline;
+}
+.navbar a {
+    color: rgb(99,96,96);
+    font-size: 150%;
+}
+
+.subheadImage {
+    display: flex;
+
+}
+
+.subheadImage img {
+    object-fit: fill;
+}
+
+.subheadImage h2 {
+    font-size: 175%;
+    line-height: 50px;
+    color:rgb(128, 125, 125);
+    float: right;
+}
