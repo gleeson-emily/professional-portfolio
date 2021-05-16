@@ -57,31 +57,54 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
+    justify-content: center;
+    align-content: center;
   }
 
   .project-1 {
     flex: 2 0 100%;
     padding: 30px;
-    transition: flex-basis 500ms linear;
-    margin-bottom: 1.5rem;
+    max-width: 1200px;
+    max-height: 800px;
+    justify-content: center;
   }
+
   .project-1 img {
-      max-width: 1000px;
+      max-width: 100%;
+      align-content: center;
   }
 
   .other-projects {
       flex: 1 0 50%;
       padding: 15px;
+      max-width: 700px;
+      max-height: 500px;
+      justify-content: center;
+      align-content: center;
 
   }
   .other-projects img {
-      max-width: 550px;
+      max-width: 100%;
   }
 
 #about-me {
     font-size: 80%;
     color: black;
     float: right;
+}
+
+@media screen and (max-width: 992px) {
+    .my-work {
+    flex: 0 0 50%;
+    flex-direction: column;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .my-work {
+    flex: 0 0 33%;
+    flex-direction: column;
+    max-width: 33%;
+  }
 }
