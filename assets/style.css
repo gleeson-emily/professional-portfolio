@@ -17,6 +17,14 @@ h1 {
     line-height: 50px;
 }
 
+h3 {
+    font-size: 125%;
+    color: black;
+    line-height: 35px;
+    float: left;
+
+}
+
 .navbar {
     float: right;
     color: rgb(99, 96, 96);
@@ -39,6 +47,41 @@ h1 {
 .subhead h2 {
     font-size: 175%;
     line-height: 50px;
-    color:rgb(128, 125, 125);
+    color: black;
+    float: right;
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.my-work {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+
+  .project-1 {
+    flex: 2 0 100%;
+    padding: 30px;
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+  }
+  .project-1 img {
+      max-width: 1000px;
+  }
+
+  .other-projects {
+      flex: 1 0 50%;
+      padding: 15px;
+
+  }
+  .other-projects img {
+      max-width: 550px;
+  }
+
+#about-me {
+    font-size: 80%;
+    color: black;
     float: right;
 }
