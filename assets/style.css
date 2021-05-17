@@ -1,15 +1,24 @@
+:root {
+    --pink1:rgb(252, 151, 201);
+    --grey1:rgb(99, 96, 96);
+}
+
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
 }
 
 header {
-    background-color:rgb(252, 151, 201);
-    color: rgb(99, 96, 96);
+    background-color: var(--pink1);
+    color: var(--grey1);
     min-height: 100px;
 }
 
 body {
-    background-color: rgb(255, 219, 237);
+    background-image: url("../assets/images/portfolio-background.png"); 
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 h1 {
@@ -22,26 +31,25 @@ h3 {
     color: black;
     line-height: 35px;
     float: left;
-
 }
 
 .navbar {
     float: right;
-    color: rgb(99, 96, 96);
+    color: var(--grey1);
 }
 .navbar li {
     display: inline;
 }
 .navbar a {
-    color: rgb(99,96,96);
+    color: var(--grey1);
     font-size: 150%;
 }
 
 .subhead {
-    background-image: url("../assets/images/portfolio-background.png"); 
-    min-height: 300px;
-    min-width: 600px;
-    background-size: cover;
+    background-color: var(--pink1);
+    min-height: 150px;
+    min-width: 400px;
+   
 }
 
 .subhead h2 {
@@ -49,9 +57,16 @@ h3 {
     line-height: 50px;
     color: black;
     float: right;
-    margin-top: 75px;
-    margin-bottom: 75px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
+
+.about {
+    color:black;
+    min-height: 150px;
+    min-width: 400px;
+}
+
 
 .my-work {
     display: flex;
@@ -62,11 +77,13 @@ h3 {
   }
 
   .project-1 {
-    flex: 2 0 100%;
+    flex: 2 0 75%;
     padding: 30px;
+    margin-bottom: 3px;
     max-width: 1200px;
     max-height: 800px;
     justify-content: center;
+    outline: black solid 2px;
   }
 
   .project-1 img {
@@ -81,30 +98,67 @@ h3 {
       max-height: 500px;
       justify-content: center;
       align-content: center;
+      outline: black solid 2px;
 
   }
   .other-projects img {
       max-width: 100%;
   }
 
-#about-me {
-    font-size: 80%;
-    color: black;
-    float: right;
+.contact
+  {
+      justify-content: center;
+      align-content: center;
+      color: black;
+      font-size: 20px;
+      margin-bottom: 50px;
+      margin-top: 50px;
+  }
+
+.contact h4 {
+    float: left;
+    font-size: 24px;
+    padding: 20px;
 }
 
+.contact li {
+      display: inline-block;
+      padding: 22px;
+  }
+
 @media screen and (max-width: 992px) {
-    .my-work {
+   .my-work {
     flex: 0 0 50%;
-    flex-direction: column;
     max-width: 50%;
   }
+
+  .project-1 {
+      flex: 2 0 100%;
+      max-width: 100%;
+  }
+
+  .other-projects {
+    flex: 1 0 50%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 50%;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
     .my-work {
-    flex: 0 0 33%;
+    flex: 1 0 33%;
     flex-direction: column;
-    max-width: 33%;
-  }
+    max-width: 50%; 
 }
+    .project-1 {
+        max-width: 100%;
+    }
+
+    .other-projects {
+        max-width: 100%;
+    }
+
+}
+   
