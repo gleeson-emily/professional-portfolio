@@ -67,13 +67,17 @@ h3 {
     min-width: 400px;
 }
 
-
 .my-work {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     justify-content: center;
     align-content: center;
+    background-color: lightpink;
+
   }
 
   .project-1 {
@@ -83,18 +87,25 @@ h3 {
     max-width: 1200px;
     max-height: 800px;
     justify-content: center;
+    align-content: center;
     outline: black solid 2px;
   }
 
   .project-1 img {
       max-width: 100%;
       align-content: center;
+      opacity: 0.5;
   }
+
+  .project-1 img:hover {
+      opacity: 1;
+  }
+
 
   .other-projects {
       flex: 1 0 50%;
       padding: 15px;
-      max-width: 700px;
+      max-width: 600px;
       max-height: 500px;
       justify-content: center;
       align-content: center;
@@ -103,6 +114,11 @@ h3 {
   }
   .other-projects img {
       max-width: 100%;
+      align-content: center;
+      opacity: 0.5;
+  }
+  .other-projects img:hover {
+      opacity: 1;
   }
 
 .contact
@@ -128,7 +144,7 @@ h3 {
 
 @media screen and (max-width: 992px) {
    .my-work {
-    flex: 0 0 50%;
+    flex: 1 0 50%;
     max-width: 50%;
   }
 
