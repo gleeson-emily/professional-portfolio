@@ -11,7 +11,10 @@
 header {
     background-color: var(--pink1);
     color: var(--grey1);
-    min-height: 100px;
+    min-height: 150px;
+    border-bottom: 2px solid lightpink;
+
+    
 }
 
 body {
@@ -24,10 +27,17 @@ body {
 h1 {
     font-size: 200%;
     line-height: 50px;
+    margin-left: 30px;
+}
+h2 {
+    font-size: 175%;
+    line-height: 50px;
+    float: left;
+    margin: 30px;
 }
 
 h3 {
-    font-size: 125%;
+    font-size: 160%;
     color: black;
     line-height: 35px;
     float: left;
@@ -35,7 +45,8 @@ h3 {
 
 .navbar {
     float: right;
-    color: var(--grey1);
+    background-color: lightpink;
+    padding: 30px;
 }
 .navbar li {
     display: inline;
@@ -43,22 +54,7 @@ h3 {
 .navbar a {
     color: var(--grey1);
     font-size: 150%;
-}
-
-.subhead {
-    background-color: var(--pink1);
-    min-height: 150px;
-    min-width: 400px;
-   
-}
-
-.subhead h2 {
-    font-size: 175%;
-    line-height: 50px;
-    color: black;
-    float: right;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    padding: 30px;
 }
 
 .about {
@@ -123,6 +119,7 @@ h3 {
 
 .contact
   {
+      background-color: lightpink;  
       justify-content: center;
       align-content: center;
       color: black;
