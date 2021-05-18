@@ -1,11 +1,12 @@
 :root {
     --pink1:rgb(252, 151, 201);
     --pink2:rgb(255, 236, 241);
+    --pink3:rgb(253, 216, 223);
     --grey1:rgb(99, 96, 96);
 }
 
 * {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    
 }
 
@@ -18,6 +19,7 @@ header {
 
 body {
     background-color: var(--pink2);
+    height: 100%;
 }
 
 h1 {
@@ -37,12 +39,26 @@ h3 {
     font-size: 160%;
     color: black;
     line-height: 35px;
+    margin-top: 35px;
     margin-bottom: 35px;
-    float: left;
+    text-align: center;
+}
+
+h4 {
+    font-size: 140%;
+    color:black;
+    line-height: 30px;   
+}
+h5 {
+    font-size: 120%;
+    color:black;
+    line-height: 15px;
 }
 
 footer {
-    font-size: 10px;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .navbar {
@@ -51,6 +67,7 @@ footer {
     padding: 30px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    box-shadow: 3px 3px 3px 3px rgba(2, 1, 1, 0.15), 3px 3px 3px 3px rgba(2, 1, 1, 0.15);
     
 }
 .navbar li {
@@ -62,30 +79,36 @@ footer {
     padding: 30px;
 }
 
-.subheadImage {
-    height: 150px;
-    width: 100%;
-    background-image: url("../assets/images/portfolio-background.png");
-    background-size: cover;
-    background-position: center;
-    opacity: 0.75;
-}
-
 .about {
     color:black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: stretch;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
     min-height: 150px;
     max-width: 1000px;
-    background-color:  rgb(255, 210, 245);
+    outline: var(--grey1) solid 2px;
+    background-color: var(--pink3);
+    padding: 50px;
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
 }
-
 .about img {
-    float: left;
     max-width: 1000px;
     max-height: 700px;
+    order: 1;
+}
+    
+.about p {
+    order: 2;
+    max-width: 800px;
+    max-height: 600px;
+    margin-top: 50px;
+    font-size: 18px;
 }
 
 .my-work {
@@ -93,12 +116,13 @@ footer {
     flex-wrap: wrap;
     flex-direction: row;
     max-width: 1200px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
     margin-left: auto;
     margin-right: auto;
-    justify-content: center;
     align-content: center;
-    background-color: lightpink;
-
+    align-items: center;
+    background-color: var(--pink3);
+    outline: var(--grey1) solid 2px;
   }
 
   .project-1 {
@@ -107,13 +131,12 @@ footer {
     margin-bottom: 3px;
     max-width: 1200px;
     max-height: 800px;
-    outline: var(--grey1) solid 2px;
   }
 
   .project-1 img {
-      max-width: 100%;
-      align-content: center;
-      opacity: 0.5;
+      max-width: 1200px;
+      max-height: 600px;
+      padding: 0 210px 0 220px;
   }
 
   .other-projects {
@@ -121,18 +144,16 @@ footer {
       padding: 15px;
       max-width: 600px;
       max-height: 500px;
-      outline: var(--grey1) solid 2px;
 
   }
   .other-projects img {
       max-width: 100%;
-      align-content: center;
-      opacity: 0.5;
+      justify-content: stretch;
   }
 
-  .project-1:hover, .other-projects:hover {
+  .project-1:hover, .other-projects:hover, .project-1:focus::after, .other-projects:focus::after {
     opacity: 1;
-    background-color: rgb(255, 210, 245);
+    background-color: rgb(255, 240, 245);
     outline: black solid 2px;
 }
 
@@ -159,7 +180,14 @@ footer {
   }
 
 
-
+  #transitionImage {
+    height: 150px;
+    width: 100%;
+    background-image: url("../assets/images/portfolio-background.png");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 3px 3px 3px 3px lightgrey;
+}
 
 @media screen and (max-width: 992px) {
     header {
@@ -174,6 +202,12 @@ footer {
         padding: 15px;
     }
 
+    .about {
+        flex: 1 0 100%;
+        flex-direction: column;
+        max-width: 75%;
+    }
+
    .my-work {
     flex: 1 0 50%;
     max-width: 75%;
@@ -181,6 +215,11 @@ footer {
 
   .project-1 {
       flex: 2 0 100%;
+      max-width: 75%;
+  }
+
+  .about img, .project-1 img {
+      padding: 0;
       max-width: 100%;
   }
 
@@ -193,25 +232,25 @@ footer {
 
 }
 
-@media screen and (max-width: 768px) {
-    .my-work {
-    flex: 1 0 50%;
-    flex-direction: column;
-    max-width: 75%; 
+@media screen and (max-width: 768px) {  
+    .about, .my-work {
+        flex: 1 0 100%;
+        flex-direction: column;
+        max-width: 75%; 
 }
     .project-1 {
+        flex: 2 0 100%;
         max-width: 75%;
+    }
+
+    .project-1 img {
+        padding: 0;
     }
 
     .other-projects {
+        flex: 1 0 50%;
         max-width: 75%;
+        padding: 0;
     }
 
 }
-   
-/* body {
-    background-image: url("../assets/images/portfolio-background.png"); 
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-} */
