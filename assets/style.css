@@ -1,5 +1,6 @@
 :root {
     --pink1:rgb(252, 151, 201);
+    --pink2:rgb(255, 236, 241);
     --grey1:rgb(99, 96, 96);
 }
 
@@ -13,15 +14,10 @@ header {
     color: var(--grey1);
     min-height: 150px;
     border-bottom: 2px solid lightpink;
-
-    
 }
 
 body {
-    background-image: url("../assets/images/portfolio-background.png"); 
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
+    background-color: var(--pink2);
 }
 
 h1 {
@@ -45,10 +41,16 @@ h3 {
     float: left;
 }
 
+footer {
+    font-size: 10px;
+}
+
 .navbar {
     float: right;
     background-color: lightpink;
     padding: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     
 }
 .navbar li {
@@ -58,6 +60,15 @@ h3 {
     color: var(--grey1);
     font-size: 150%;
     padding: 30px;
+}
+
+.subheadImage {
+    height: 150px;
+    width: 100%;
+    background-image: url("../assets/images/portfolio-background.png");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.75;
 }
 
 .about {
@@ -147,6 +158,9 @@ h3 {
       padding: 22px;
   }
 
+
+
+
 @media screen and (max-width: 992px) {
     header {
         font-size: 75%;
@@ -195,3 +209,9 @@ h3 {
 
 }
    
+/* body {
+    background-image: url("../assets/images/portfolio-background.png"); 
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+} */
