@@ -12,6 +12,7 @@
 
 header {
     background-color: var(--pink1);
+    background-size: cover;
     color: var(--grey1);
     min-height: 150px;
     border-bottom: 2px solid lightpink;
@@ -20,6 +21,7 @@ header {
 body {
     background-color: var(--pink2);
     height: 100%;
+    overflow-wrap: break-word;
 }
 
 h1 {
@@ -46,19 +48,31 @@ h3 {
 
 h4 {
     font-size: 140%;
-    color:black;
-    line-height: 30px;   
+    color:black;  
 }
 h5 {
     font-size: 120%;
     color:black;
-    line-height: 15px;
+    line-height: 20px;
 }
 
 footer {
     font-size: 15px;
     text-align: center;
-    margin-bottom: 20px;
+    padding: 25px;
+}
+
+.shadow {
+    box-shadow: 3px 3px 3px 3px rgba(2, 1, 1, 0.15), 3px 3px 3px 3px rgba(2, 1, 1, 0.15);
+}
+
+.shadowBig {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.margins {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .navbar {
@@ -67,7 +81,6 @@ footer {
     padding: 30px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    box-shadow: 3px 3px 3px 3px rgba(2, 1, 1, 0.15), 3px 3px 3px 3px rgba(2, 1, 1, 0.15);
     
 }
 .navbar li {
@@ -82,20 +95,18 @@ footer {
 .about {
     color:black;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: space-evenly;
     align-content: stretch;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
+    align-items: center;
     min-height: 150px;
-    max-width: 1000px;
+    max-width: 80%;
     outline: var(--grey1) solid 2px;
     background-color: var(--pink3);
     padding: 50px;
     margin-top: 50px;
     margin-bottom: 50px;
-    margin-left: auto;
-    margin-right: auto;
 }
 .about img {
     max-width: 1000px;
@@ -115,28 +126,37 @@ footer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    max-width: 1200px;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 75%;
+    justify-content: center;
     align-content: center;
     align-items: center;
     background-color: var(--pink3);
     outline: var(--grey1) solid 2px;
   }
 
+  .my-work h4 {
+    line-height: 30px;
+  }
+
+.my-work p {
+    font-size: 18px;
+    line-height: 30px;
+}
+
   .project-1 {
     flex: 2 0 75%;
     padding: 30px;
-    margin-bottom: 3px;
-    max-width: 1200px;
-    max-height: 800px;
+    margin-bottom: 10px;
+    max-width: 100%;
+    max-height: 50%;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
   }
 
   .project-1 img {
-      max-width: 1200px;
-      max-height: 600px;
-      padding: 0 210px 0 220px;
+      max-width: 75%;
+      align-content: center;
   }
 
   .other-projects {
@@ -144,6 +164,7 @@ footer {
       padding: 15px;
       max-width: 600px;
       max-height: 500px;
+      margin-bottom: 10px;
 
   }
   .other-projects img {
@@ -159,19 +180,22 @@ footer {
 
 .contact
   {
-      background-color: lightpink;  
-      justify-content: center;
-      align-content: center;
+      background-color: lightpink;
+      max-width: 75%;
+      text-align: center;
       color: black;
       font-size: 20px;
       margin-bottom: 50px;
       margin-top: 50px;
+      border-radius: 10px;
   }
 
 .contact h4 {
-    float: left;
+    background-color: var(--pink3);
+    max-width: 15%;
     font-size: 24px;
     padding: 20px;
+    border-radius: 15px;
 }
 
 .contact li {
@@ -179,7 +203,9 @@ footer {
       padding: 22px;
   }
 
-
+.contact a {
+    color: black;
+}
   #transitionImage {
     height: 150px;
     width: 100%;
@@ -193,12 +219,17 @@ footer {
     header {
         font-size: 75%;
     }
+
+    h1 {
+        line-height: 30px;
+    }
+
     h2 {
         float: left;
         line-height: 30px;
     }
 
-    .navbar {
+    .navbar, .navbar li {
         padding: 15px;
     }
 
@@ -216,11 +247,13 @@ footer {
   .project-1 {
       flex: 2 0 100%;
       max-width: 75%;
+      
   }
 
   .about img, .project-1 img {
       padding: 0;
       max-width: 100%;
+      margin: auto;
   }
 
   .other-projects {
@@ -230,27 +263,65 @@ footer {
     max-width: 50%;
   }
 
+  .contact {
+      font-size: 15px;
+      margin: auto;
+      padding: 10px;
+  }
+  .contact h4 {
+      font-size: 18px;
+      padding: 10px;
+      max-width: 25%;
+  }
+  .contact li {
+      padding: 10px;
+  }
 }
 
 @media screen and (max-width: 768px) {  
+    header {
+        font-size: 50%;
+        line-height: 10px;
+        min-height: 100px;
+    }
+h1, h2 {
+    line-height: 15px;
+}
+.navbar {
+    padding: 5px;
+}
+
+.navbar li {
+    padding: 5px;
+}
+
     .about, .my-work {
         flex: 1 0 100%;
         flex-direction: column;
         max-width: 75%; 
 }
     .project-1 {
-        flex: 2 0 100%;
+        flex: 1 0 100%;
         max-width: 75%;
     }
 
     .project-1 img {
         padding: 0;
+        margin: auto;
     }
 
     .other-projects {
         flex: 1 0 50%;
         max-width: 75%;
         padding: 0;
+    }
+    .contact h4 {
+        font-size: 15px;
+        max-width: 50%;
+    }
+
+    .contact li {
+        font-size: 12px;
     }
 
 }
