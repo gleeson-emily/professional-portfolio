@@ -6,3 +6,8 @@ Note that I have only finished one project at the moment, so the other four proj
 
 I tried to consolidate my CSS to be under 300 lines, but this wasn't possible. Additionally, I spent a good two hours trying to centre the image in the project-1 class, and I just cannot get it to properly display when the window is over 992 pixels. Any feedback and advice on fixing this/consolidating the code will be much appreciated.
 
+# Screenshot
+![Portfolio](./assets/images/portfolio-screenshot.png)
+
+https://gleeson-emily.github.io/professional-portfolio/
+
