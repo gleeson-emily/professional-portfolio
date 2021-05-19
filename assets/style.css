@@ -172,8 +172,8 @@ footer {
       justify-content: stretch;
   }
 
-  .project-1:hover, .other-projects:hover, .project-1:focus::after, .other-projects:focus::after {
-    opacity: 1;
+  .project-1:hover, .other-projects:hover
+ {
     background-color: rgb(255, 240, 245);
     outline: black solid 2px;
 }
